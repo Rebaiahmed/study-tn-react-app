@@ -5,12 +5,13 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Todos from './components/Todos';
 
+
 function App() {
   return (
     <div>
       <Navbar />
-
       <div className="container">
+      
       <Todos />
       </div>
 

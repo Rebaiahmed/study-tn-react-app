@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import TodoAdd from './TodoAdd';
 
 
 class Todos extends React.Component {
@@ -8,21 +9,21 @@ class Todos extends React.Component {
     super(props)
     this.state = {
       msg: '',
-      data: [
+      todos: [
         {
           id: 0,
           "title": "Finish my React course",
-          "status": false
+          "completed": true
         },
         {
           id: 1,
           "title": "Share Study React course",
-          "status": false
+          "completed": false
         },
         {
           id: 2,
           "title": "Deploy my React App",
-          "status": false
+          "completed": false
         }
       ]
     }
@@ -31,32 +32,66 @@ class Todos extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      console.log('Our data is fetched');
+      console.log('Our todos is fetched');
       this.setState({
       })
     }, 1000)
 
   }
 
-  deleteTodo = (id,event) => {
-    alert("event"+event.type);
-    let { data } = this.state;
-    data.splice(id, 1);
+  deleteTodo = (id, event) => {
+    let { todos } = this.state;
+    todos.splice(id, 1);
     this.setState({
-      data: data
+      todos: todos
     });
   }
 
+
+  addTodo = (newTodo) => {
+
+    this.setState({ todos: [...this.state.todos, newTodo] })
+  }
+
+  markComplete = (id) => {
+
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo;
+      })
+    })
+  }
+
   render() {
-    let { data, msg } = this.state;
+    let { todos, msg } = this.state;
+    let todosDone = todos.filter(item => item.completed==true)
+    let todoTodo = todos.filter(item => item.completed==false)
     return (
       <React.Fragment>
         <h3>{msg}</h3>
-        <ul className="list-group">
-          {data.map((value, index) => {
-            return <TodoItem deleteTodo={this.deleteTodo} id={value.id} title={value.title} index={index} date={new Date()} />
+        <TodoAdd addTodo={this.addTodo} />
+        <div className="row">
+          <div className="col-lg-6">
+            <ul className="list-group">
+              {todoTodo.map((value, index) => {
+                return <TodoItem markComplete={this.markComplete} deleteTodo={this.deleteTodo} id={value.id} title={value.title} completed={value.completed} index={index} />
+              })}
+            </ul>
+          </div>
+
+          <div className="col-lg-6">
+          <ul className="list-group">
+          {todosDone.map((value, index) => {
+            return <TodoItem id={value.id} title={value.title} completed={value.completed} index={index}   />
           })}
         </ul>
+
+          </div>
+        </div>
+
 
       </React.Fragment>
     )
