@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 import TodoAdd from './TodoAdd';
+import axios from 'axios';
 
 
 class Todos extends React.Component {
@@ -10,47 +11,51 @@ class Todos extends React.Component {
     this.state = {
       msg: '',
       todos: [
-        {
-          id: 0,
-          "title": "Finish my React course",
-          "completed": true
-        },
-        {
-          id: 1,
-          "title": "Share Study React course",
-          "completed": false
-        },
-        {
-          id: 2,
-          "title": "Deploy my React App",
-          "completed": false
-        }
+
       ]
     }
   }
 
 
   componentDidMount() {
-    setTimeout(() => {
-      console.log('Our todos is fetched');
-      this.setState({
-      })
-    }, 1000)
 
+    this.getTodos()
+  }
+
+
+  getTodos() {
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+      .then(res => {
+        this.setState({ todos: res.data })
+      }).catch(err => {
+        console.log('err' + err);
+      })
   }
 
   deleteTodo = (id, event) => {
-    let { todos } = this.state;
-    todos.splice(id, 1);
-    this.setState({
-      todos: todos
-    });
+
+    axios.delete('https://jsonplaceholder.typicode.com/todos/${id}')
+      .then(res => {
+        console.log('res' + res);
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id != id)] })
+
+      }).catch(err => {
+        console.log('err' + err);
+      })
+
   }
 
 
   addTodo = (newTodo) => {
 
-    this.setState({ todos: [...this.state.todos, newTodo] })
+    axios.post('https://jsonplaceholder.typicode.com/todos', newTodo)
+      .then(res => {
+        this.setState({ todos: [...this.state.todos, res.data] })
+      }).catch(err => {
+        console.log('err' + err);
+      })
+
+
   }
 
   markComplete = (id) => {
@@ -67,8 +72,8 @@ class Todos extends React.Component {
 
   render() {
     let { todos, msg } = this.state;
-    let todosDone = todos.filter(item => item.completed==true)
-    let todoTodo = todos.filter(item => item.completed==false)
+    let todosDone = todos.filter(item => item.completed == true)
+    let todoTodo = todos.filter(item => item.completed == false)
     return (
       <React.Fragment>
         <h3>{msg}</h3>
@@ -83,11 +88,11 @@ class Todos extends React.Component {
           </div>
 
           <div className="col-lg-6">
-          <ul className="list-group">
-          {todosDone.map((value, index) => {
-            return <TodoItem id={value.id} title={value.title} completed={value.completed} index={index}   />
-          })}
-        </ul>
+            <ul className="list-group">
+              {todosDone.map((value, index) => {
+                return <TodoItem id={value.id} title={value.title} completed={value.completed} index={index} />
+              })}
+            </ul>
 
           </div>
         </div>
