@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todos from '../components/Todos';
+import Todos from '../Todos';
 class Home extends Component {
     render() {
         return (
