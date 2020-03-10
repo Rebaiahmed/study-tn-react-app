@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/study-tn-react-app/static/css/main.5f77df60.chunk.css",
-    "main.js": "/study-tn-react-app/static/js/main.641801bd.chunk.js",
-    "main.js.map": "/study-tn-react-app/static/js/main.641801bd.chunk.js.map",
+    "main.js": "/study-tn-react-app/static/js/main.72360657.chunk.js",
+    "main.js.map": "/study-tn-react-app/static/js/main.72360657.chunk.js.map",
     "runtime-main.js": "/study-tn-react-app/static/js/runtime-main.e3a8584b.js",
     "runtime-main.js.map": "/study-tn-react-app/static/js/runtime-main.e3a8584b.js.map",
     "static/js/2.6eaf9fae.chunk.js": "/study-tn-react-app/static/js/2.6eaf9fae.chunk.js",
     "static/js/2.6eaf9fae.chunk.js.map": "/study-tn-react-app/static/js/2.6eaf9fae.chunk.js.map",
     "index.html": "/study-tn-react-app/index.html",
-    "precache-manifest.5ec0655c2804756cc933ed28cd1d96b8.js": "/study-tn-react-app/precache-manifest.5ec0655c2804756cc933ed28cd1d96b8.js",
+    "precache-manifest.949b6e483b9c2b8f61d127f4248dfde8.js": "/study-tn-react-app/precache-manifest.949b6e483b9c2b8f61d127f4248dfde8.js",
     "service-worker.js": "/study-tn-react-app/service-worker.js",
     "static/css/main.5f77df60.chunk.css.map": "/study-tn-react-app/static/css/main.5f77df60.chunk.css.map",
     "static/js/2.6eaf9fae.chunk.js.LICENSE": "/study-tn-react-app/static/js/2.6eaf9fae.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e3a8584b.js",
     "static/js/2.6eaf9fae.chunk.js",
     "static/css/main.5f77df60.chunk.css",
-    "static/js/main.641801bd.chunk.js"
+    "static/js/main.72360657.chunk.js"
   ]
 }
