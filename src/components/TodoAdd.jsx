@@ -40,7 +40,7 @@ class TodoAdd extends Component {
             <div>
             <form onSubmit={this.submit} className="form-inline">
              <div className="form-group mb-2">
-            <input type="text" name="todo" placeholder="Add Todo .." class="form-control" value={this.state.todo} onChange={this.onChange} />
+            <input type="text" name="todo" placeholder="Add Todo .." className="form-control" value={this.state.todo} onChange={this.onChange} />
             </div>
             <button type="submit" className="btn btn-primary mb-2">+</button>
             </form>

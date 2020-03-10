@@ -4,7 +4,7 @@ function Navbar() {
     return <React.Fragment>
 
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a className="navbar-brand" href="#">Study-tn React App</a>
+            <a className="navbar-brand" href="/">Study-tn React App</a>
             <ul className="navbar-nav">
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">Home</Link>

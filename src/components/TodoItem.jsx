@@ -7,7 +7,7 @@ function TodoItem(props) {
   return (
       <div>
       <li className="list-group-item" key={props.index}>
-      <label class="form-check-label" for="exampleCheck1">{props.title}</label>
+      <label className="form-check-label" htmlFor="exampleCheck1">{props.title}</label>
       </li>
       </div>
   )
@@ -16,10 +16,10 @@ function TodoItem(props) {
             <div>
     
                 <li className="list-group-item" key={props.index}>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" value={props.completed}
+                    <div className="form-check">
+                        <input type="checkbox" className="form-check-input" id="exampleCheck1" value={props.completed}
                         onChange={(e)=>props.markComplete(props.id)} />
-                        <label class="form-check-label" for="exampleCheck1">{props.title}</label>
+                        <label className="form-check-label" htmlFor="exampleCheck1">{props.title}</label>
                         <button type="button"  onClick={(event) => props.deleteTodo(props.id, event)} className="close" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

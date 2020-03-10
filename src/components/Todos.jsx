@@ -34,10 +34,10 @@ class Todos extends React.Component {
 
   deleteTodo = (id, event) => {
 
-    axios.delete('https://jsonplaceholder.typicode.com/todos/${id}')
+    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then(res => {
         console.log('res' + res);
-        this.setState({ todos: [...this.state.todos.filter(todo => todo.id != id)] })
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
 
       }).catch(err => {
         console.log('err' + err);
@@ -72,8 +72,8 @@ class Todos extends React.Component {
 
   render() {
     let { todos, msg } = this.state;
-    let todosDone = todos.filter(item => item.completed == true)
-    let todoTodo = todos.filter(item => item.completed == false)
+    let todosDone = todos.filter(item => item.completed === true)
+    let todoTodo = todos.filter(item => item.completed === false)
     return (
       <React.Fragment>
         <h3>{msg}</h3>
@@ -82,7 +82,7 @@ class Todos extends React.Component {
           <div className="col-lg-6">
             <ul className="list-group">
               {todoTodo.map((value, index) => {
-                return <TodoItem markComplete={this.markComplete} deleteTodo={this.deleteTodo} id={value.id} title={value.title} completed={value.completed} index={index} />
+                return <TodoItem markComplete={this.markComplete} deleteTodo={this.deleteTodo} id={value.id} title={value.title} completed={value.completed} key={index} />
               })}
             </ul>
           </div>
@@ -90,7 +90,7 @@ class Todos extends React.Component {
           <div className="col-lg-6">
             <ul className="list-group">
               {todosDone.map((value, index) => {
-                return <TodoItem id={value.id} title={value.title} completed={value.completed} index={index} />
+                return <TodoItem id={value.id} title={value.title} completed={value.completed} key={index} />
               })}
             </ul>
 
