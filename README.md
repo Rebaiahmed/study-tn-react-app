@@ -16,15 +16,43 @@
 
 
 ---
-## Setup
 
-Clone this repo to your desktop and run `npm install` to install all the dependencies.
+# Getting started
 
-## Start
+### Familiar with Git?
 
- `npm start` to start the project
+clone this repository and `cd` into `study-tn-react-app` folder
 
----
+```
+git clone https://github.com/Rebaiahmed/study-tn-react-app.git
+
+cd study-tn-react-app
+```
+
+### Not familiar with Git?
+
+- <a href="https://github.com/Rebaiahmed/study-tn-react-app.git/archive/master.zip">Download ZIP</a>
+- extract the contents of the zip file
+- and `cd` into `study-tn-react-app` folder `cd study-tn-react-app`
+
+### Install dependencies
+
+```
+npm install
+```
+
+### Start development server
+
+```
+npm start
+```
+
+
+
+
+
+
+
 
 ## Useful Links 
 
