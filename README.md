@@ -11,12 +11,6 @@
 <br/>
 
 
-
-## About this project
-
-
----
-
 # Getting started
 
 ### Familiar with Git?
