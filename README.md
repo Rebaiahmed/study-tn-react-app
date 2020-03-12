@@ -39,6 +39,17 @@ Clone this repo to your desktop and run `npm install` to install all the depende
 ---
 
 
+## Feedback 
+Any questions or suggestions?
+
+You are welcome to discuss it on:
+
+
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/RebaiAhmed_)
+
+<br/>
+<br/>
+
 
 ## Author
 
