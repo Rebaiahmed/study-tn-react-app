@@ -1,25 +1,45 @@
+<div align="center">
+  <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="110" height="110"/>
+  <br/>
+  <br/>
+  <br/>
+  
+  <img src="https://media-exp1.licdn.com/dms/image/C5622AQGA1bjl-d_Phg/feedshare-shrink_800/0?e=1586995200&v=beta&t=8kl-wntJg6ZDvjiGYdQmDxbs6XovcOw1wcWBH6006s4"/>
+</div>
+
+<br/>
+<br/>
+
+
+
 ## About this project
 
-This is a project I used to learn about ReactJs. Is based on a Udemy course.
 
-## How to Start 
+---
+## Setup
 
-ici kifeh yaaml git clone or download project 
-zeda yaamn np install
-npm start 
+Clone this repo to your desktop and run `npm install` to install all the dependencies.
 
+## Start
+
+ `npm start` to start the project
+
+---
 
 ## Useful Links 
 
+⋅⋅* [Reactjs docs](https://reactjs.org/docs/getting-started.html)
 
+⋅⋅* [Awesome-react](https://github.com/enaqx/awesome-react)
 
+⋅⋅* [React app Deployment](https://create-react-app.dev/docs/deployment/)
 
-## Deployement issues !
+⋅⋅* [React communities](https://reactjs.org/community/support.html)
 
-ici guide ki bch youhel f deployement 
+---
+
 
 
 ## Author
 
-* Rebai Ahmed <danieltomefer@gmail.com>
-* Follow me on [![alt text][1.1]][1]
+* Rebai Ahmed <rebai.ahmed@outlook.com>
